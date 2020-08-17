@@ -26,6 +26,10 @@ class Videogame {
         return this.biosType;
     }
 
+    set biosType(value) {
+        throw new Error('You cannot modify bisotype once constructed!');
+    }
+
     set running(dummy) {
         this.running = true;
     }

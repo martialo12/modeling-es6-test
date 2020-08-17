@@ -20,7 +20,7 @@ describe('it should check game room correct behaviours', () => {
     });
     it('should remove the whole mock list from room now', () => {
         expect(() => {
-            mock.forEach(json => room.addGame(new Videogame(json.name, json.biosType)));
+            mock.forEach(json => room.removeGame(new Videogame(json.name, json.biosType)));
         }).to.not.throw();
         expect(0).to.equal(room.videogames.length);
     });
